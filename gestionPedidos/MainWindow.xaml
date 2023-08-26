@@ -1,0 +1,48 @@
+﻿<Window x:Class="gestionPedidos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gestionPedidos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF2E7F27">
+        <ListBox x:Name="listBox1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="23,45,420,276" RenderTransformOrigin="0.5,0.5" MouseDoubleClick="listBox1_MouseDoubleClick" Background="#FFEEEF22">
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.217"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-1.264"/>
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+        <Label Content="Clientes" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Pedidos" HorizontalAlignment="Left" Margin="30,190,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <ListBox x:Name="listBox2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="22,228,420,75" RenderTransformOrigin="0.5,0.5" Background="#FFE85E35">
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.217"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-1.264"/>
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+        <Button x:Name="btnPedidos" Content="Cargar Pedidos" HorizontalAlignment="Left" Margin="270,191,0,0" VerticalAlignment="Top" Width="108" Background="#FF3C74E2" FontWeight="Bold" Click="btn_pedidos_Click" Height="34" FontSize="14"/>
+        <Button x:Name="btnCerrar" Content="Cerrar" HorizontalAlignment="Center" Margin="0,365,0,0" VerticalAlignment="Top" Height="34" Width="86" Background="#FF3C74E2" FontWeight="Bold" FontSize="14" Click="Cerrar_Click"/>
+        <Button x:Name="btnBorrar" Content="Borrar Pedido" HorizontalAlignment="Left" Margin="22,359,0,0" VerticalAlignment="Top" Background="#FF3C74E2" Height="34" Width="122" FontWeight="Bold" FontSize="14" Click="btnBorrar_Click"/>
+        <Label Content="Nombres" HorizontalAlignment="Left" Margin="412,15,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="impNombre" HorizontalAlignment="Left" Margin="412,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+        <Label Content="Dirección" HorizontalAlignment="Left" Margin="603,15,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="impDir" HorizontalAlignment="Left" Margin="603,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+        <Label Content="Población" HorizontalAlignment="Left" Margin="412,64,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="impPob" HorizontalAlignment="Left" Margin="412,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+        <Label Content="Telefono" HorizontalAlignment="Left" Margin="603,64,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="impCell" HorizontalAlignment="Left" Margin="603,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+        <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="538,113,0,0" VerticalAlignment="Top" Height="30" Width="107" FontWeight="Bold" FontSize="14" Background="#FF3C74E2" Click="btnGuardar_Click"/>
+        <Button x:Name="btnBorrarCliente" Content="Borrar Cliente" HorizontalAlignment="Left" Margin="22,159,0,0" VerticalAlignment="Top" Width="122" Height="26" Background="#FF3C74E2" FontWeight="Bold" FontSize="14" Click="btnBorrarCl"/>
+        <Button x:Name="btnActualizar" Content="Actualziar" HorizontalAlignment="Left" Margin="156,159,0,0" VerticalAlignment="Top" Height="26" Width="96" Background="#FF3C74E2" FontWeight="Bold" FontSize="14" Click="btnActualizar_Click"/>
+
+    </Grid>
+</Window>
